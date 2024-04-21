@@ -6,9 +6,9 @@ import (
 
 // ANSI escape sequences
 const (
-	greenColor  = "\033[1;32m"
-	purpleColor = "\033[1;34m"
-	resetColor  = "\033[0m"
+	greenColour  = "\033[1;32m"
+	purpleColour = "\033[1;34m"
+	resetColour  = "\033[0m"
 )
 
 func main() {
@@ -21,7 +21,7 @@ func main() {
 \____//____/\____/   
 `
 
-	fmt.Printf("%s%sEnter CSV file path:%s\n", greenColor, c2jArt, resetColor)
+	fmt.Printf("%s%sEnter CSV file path:%s\n", greenColour, c2jArt, resetColour)
 	var csvFilePath string
 	_, err := fmt.Scanln(&csvFilePath)
 	if err != nil {
@@ -29,7 +29,7 @@ func main() {
 	}
 
 	// Prompt user to enter JSON file path
-	fmt.Printf("%sEnter JSON file path:%s\n", greenColor, resetColor)
+	fmt.Printf("%sEnter JSON file path:%s\n", greenColour, resetColour)
 	var jsonFilePath string
 	_, err = fmt.Scanln(&jsonFilePath)
 	if err != nil {
@@ -48,5 +48,5 @@ func main() {
 		panic("Error writing JSON file: " + err.Error())
 	}
 
-	fmt.Printf("%sCSV to JSON conversion complete.\nJSON file saved at: %s%s\n", purpleColor, jsonFilePath, resetColor)
+	fmt.Printf("%sCSV to JSON conversion complete.\nJSON file saved at: %s%s\n", purpleColour, jsonFilePath, resetColour)
 }

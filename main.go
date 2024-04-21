@@ -21,7 +21,7 @@ func main() {
 \____//____/\____/   
 `
 
-	fmt.Printf("%s%sEnter C2J file path:%s\n", greenColor, c2jArt, resetColor)
+	fmt.Printf("%s%sEnter CSV file path:%s\n", greenColor, c2jArt, resetColor)
 	var csvFilePath string
 	_, err := fmt.Scanln(&csvFilePath)
 	if err != nil {
